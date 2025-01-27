@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Contact My 3D Printing Business" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - My 3D Printing Business</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact - CHS 3D Print Lab">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - CHS 3D Print Lab</title>
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header>
     <div class="navbar">
-      <a href="index.html" class="logo">My3DPrints</a>
+      <a href="index.html" class="logo">CHS 3D Print Lab</a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="custom-order.html">Custom Orders</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -24,31 +33,32 @@
 
   <section class="contact-section">
     <h2>Get in Touch</h2>
-    <p>We’d love to hear from you! Fill out the form below or send us an email.</p>
+    <p>We’d love to hear from you! Fill out the form below or send us an email at 
+      <strong><a href="mailto:chsprintlab@gmail.com">chsprintlab@gmail.com</a></strong>.
+    </p>
 
-    <form action="mailto:chsprintlab@gmail.com" method="GET" enctype="text/plain">
+    <form action="#" method="POST" class="contact-form">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
+      <input type="text" id="name" name="name" required />
+
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
+      <input type="email" id="email" name="email" required />
+
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
-      
+
       <button type="submit">Send Message</button>
     </form>
-    
 
     <div class="contact-info">
       <p><strong>Email:</strong> chsprintlab@gmail.com</p>
-      <p><strong>Phone:</strong> (123) 456-7890</p>
-      <p><strong>Address:</strong> 123 3D Print Lane, Your City, Country</p>
+      <p><strong>Address:</strong> 123 Engineering Ave, CHS Campus</p>
+      <p><strong>Phone:</strong> (555) 123-4567</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 My3DPrints. All rights reserved.</p>
+    <p>&copy; 2025 CHS 3D Print Lab. All rights reserved.</p>
   </footer>
 </body>
 </html>

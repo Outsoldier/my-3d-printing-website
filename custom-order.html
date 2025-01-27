@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Custom 3D Print Orders - CHS Print Lab">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Orders - CHS Print Lab</title>
+
+  <!-- Fonts + Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">CHS 3D Print Lab</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="custom-order.html" class="active">Custom Orders</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <h2>Request a Custom 3D Print</h2>
+    <p>Please fill out the form below to let us know your project details. We’ll review your submission and get back to you with a quote.</p>
+
+    <!-- Example using Formspree endpoint (replace with your own if you sign up) -->
+    <form
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+      class="contact-form"
+    >
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" required />
+
+      <label for="material">Preferred Material:</label>
+      <select id="material" name="material">
+        <option value="PLA">PLA</option>
+        <option value="ABS">ABS</option>
+        <option value="PETG">PETG</option>
+        <option value="Carbon Fiber">Carbon Fiber</option>
+        <option value="Not Sure">Not Sure</option>
+      </select>
+
+      <label for="size">Approx. Dimensions or Size:</label>
+      <input type="text" id="size" name="size" placeholder="e.g. 5x5x5 cm" />
+
+      <label for="design">Need Design Services?</label>
+      <select id="design" name="design">
+        <option value="No, I have a 3D file">No, I have a 3D file</option>
+        <option value="Yes, basic design needed">Yes, basic design needed</option>
+        <option value="Yes, advanced design needed">Yes, advanced design needed</option>
+      </select>
+
+      <label for="details">Project Details or Notes:</label>
+      <textarea id="details" name="details" rows="5" placeholder="Describe your project here..."></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+
+    <!-- If using Netlify, you'd set data-netlify="true" etc. Instead of formspree -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CHS 3D Print Lab. All rights reserved.</p>
+  </footer>
+</body>
+</html>
