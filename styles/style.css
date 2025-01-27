@@ -1,13 +1,19 @@
+/*************************************
+  COLOR VARIABLES
+*************************************/
 :root {
-  --color-primary: #34495e;    /* Dark blue/gray */
-  --color-secondary: #2ecc71;  /* Vibrant green */
-  --color-accent: #16a085;     /* Teal accent */
+  --color-primary: #000000; /* Black */
+  --color-secondary: #c9302c; /* Red */
+  --color-accent: #ffcc00; /* Gold */
+
   --color-white: #ffffff;
   --color-light: #f9f9f9;
   --color-dark: #333333;
 }
 
-/* RESET & GLOBAL */
+/*************************************
+  GLOBAL RESET & FONTS
+*************************************/
 * {
   margin: 0;
   padding: 0;
@@ -15,14 +21,16 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--color-dark);
-  background-color: var(--color-light);
+  font-family: 'Montserrat', sans-serif; /* or any preferred font */
+  color: var(--color-white);
+  background-color: var(--color-primary); /* Black background */
 }
 
-/* NAVBAR */
+/*************************************
+  NAVBAR
+*************************************/
 header {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary); /* Black */
   padding: 1rem 0;
 }
 .navbar {
@@ -33,34 +41,56 @@ header {
   margin: 0 auto;
   padding: 0 1rem;
 }
-.navbar .logo {
-  font-size: 1.5rem;
-  color: var(--color-white);
+
+/* LOGO LINK (with optional text + image) */
+.navbar-logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  color: var(--color-accent); /* Gold for the text next to logo */
+  font-size: 1.5rem;
   font-weight: 700;
+  gap: 0.5rem; /* space between the logo image and text */
 }
+
+/* LOGO IMAGE */
+.logo-img {
+  height: 40px; /* adjust as needed */
+  width: auto;
+  object-fit: contain;
+}
+
+/* NAV LINKS */
 .navbar nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 .navbar nav ul li a {
-  color: var(--color-white);
+  color: var(--color-accent); /* Gold links by default */
   text-decoration: none;
   font-weight: 600;
   padding: 0.3rem 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 .navbar nav ul li a:hover,
 .navbar nav ul li a.active {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-secondary); /* Red background on hover */
+  color: var(--color-white);
   border-radius: 4px;
 }
 
-/* HERO */
+/*************************************
+  HERO SECTION
+*************************************/
 .hero {
-  color: var(--color-white);
+  /* If you want a gradient, otherwise place an image in background */
+  /* background: linear-gradient(to right, #000000 0%, #c9302c 100%); */
+  /* Or if you prefer an image: background: url('images/hero.jpg') center/cover no-repeat; */
+  
   text-align: center;
   padding: 5rem 1rem;
+  color: var(--color-white);
 }
 .hero h1 {
   font-size: 3rem;
@@ -73,8 +103,8 @@ header {
 }
 .cta-button {
   display: inline-block;
-  background-color: var(--color-white);
-  color: var(--color-primary);
+  background-color: var(--color-accent); /* Gold */
+  color: var(--color-primary); /* Black text on gold button */
   padding: 1rem 2rem;
   text-decoration: none;
   font-weight: 600;
@@ -82,38 +112,51 @@ header {
   transition: background-color 0.3s, color 0.3s;
 }
 .cta-button:hover {
-  background-color: var(--color-dark);
+  background-color: var(--color-secondary); /* Red on hover */
   color: var(--color-white);
 }
 
-/* SERVICES / ABOUT SECTIONS */
-.services, .about-us, .contact-section {
+/*************************************
+  MAIN SECTIONS (services, about, contact, etc.)
+*************************************/
+.services,
+.about-us,
+.contact-section {
   padding: 3rem 1rem;
-  background-color: var(--color-white);
   max-width: 1200px;
   margin: 0 auto;
+  background-color: var(--color-primary); /* Black background */
   text-align: center;
+  color: var(--color-white);
 }
-.services h2, .about-us h2, .contact-section h2 {
+.services h2,
+.about-us h2,
+.contact-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-accent); /* Gold headings */
 }
+
 .service-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
+
+/*************************************
+  SERVICE CARDS
+*************************************/
 .service-card {
-  background-color: var(--color-light);
+  background-color: var(--color-dark); /* #333 for contrast */
   padding: 1.5rem;
   max-width: 300px;
   border-radius: 8px;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #444;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   transition: transform 0.3s;
+  text-align: left;
 }
 .service-card:hover {
   transform: translateY(-5px);
@@ -121,30 +164,34 @@ header {
 .service-card h3 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  color: var(--color-primary);
+  color: var(--color-accent); /* Gold */
   font-weight: 600;
 }
-.service-card p, .service-card ul {
-  text-align: left;
+.service-card p,
+.service-card ul {
   font-size: 0.95rem;
-  margin-top: 0.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* ABOUT PAGE STYLES */
+/*************************************
+  ABOUT PAGE
+*************************************/
 .about-us h3 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: var(--color-accent);
+  color: var(--color-secondary); /* Red subheadings */
 }
-.about-us p, .about-us ul {
+.about-us p,
+.about-us ul {
   text-align: left;
   line-height: 1.6;
   max-width: 800px;
   margin: 1rem auto;
 }
 
-/* CUSTOM ORDER & CONTACT FORMS */
+/*************************************
+  FORMS (Custom Orders & Contact)
+*************************************/
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -156,6 +203,7 @@ header {
 .contact-form label {
   font-weight: 600;
   margin-bottom: 0.3rem;
+  color: var(--color-accent); /* gold labels */
 }
 .contact-form input,
 .contact-form textarea,
@@ -164,10 +212,11 @@ header {
   padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: var(--color-dark);
 }
 .contact-form button {
-  background-color: var(--color-accent);
-  color: var(--color-white);
+  background-color: var(--color-accent); /* Gold */
+  color: var(--color-primary); /* Black text on button */
   padding: 0.75rem;
   border: none;
   cursor: pointer;
@@ -176,21 +225,25 @@ header {
   transition: background-color 0.3s;
 }
 .contact-form button:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary); /* Red */
+  color: var(--color-white);
 }
+
 .contact-info {
   margin-top: 2rem;
   line-height: 1.6;
 }
 .contact-info a {
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
-/* FOOTER */
+/*************************************
+  FOOTER
+*************************************/
 footer {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-primary); /* black footer */
+  color: var(--color-accent); /* gold text */
   text-align: center;
   padding: 1.5rem;
   margin-top: 3rem;
